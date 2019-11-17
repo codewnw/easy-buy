@@ -1,6 +1,5 @@
 package com.easybuy.controller;
 
-import org.springframework.jmx.export.annotation.ManagedAttribute;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,8 +20,9 @@ public class UserController {
 	}
 	
 	@PostMapping("/process-signup")
-	public void save(@ModelAttribute("user") User user) {
+	public String save(@ModelAttribute("user") User user) {
 		System.out.println(user);
+		return "index";
 	}
 
 }
