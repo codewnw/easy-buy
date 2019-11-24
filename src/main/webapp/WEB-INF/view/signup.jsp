@@ -10,6 +10,7 @@
 <body>
 	<%@ include file="header.jsp"%>
 	<div class="container">
+	${message}
 		<form:form modelAttribute="user"
 			action="${pageContext.request.contextPath}/users/process-signup"
 			method="post">

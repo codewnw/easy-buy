@@ -1,29 +1,37 @@
 package com.easybuy.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "EB_USER")
 public class User {
 
+	@Id
+	@Column(name = "email")
 	private String email;
 
+	@Column(name = "password")
 	private String password;
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
+	@Column(name = "name")
 	private String name;
 
+	@Column(name = "mobile")
 	private String mobile;
 
+	@Column(name = "address1")
 	private String address1;
 
+	@Column(name = "address2")
 	private String address2;
 
+	@Column(name = "city")
 	private String city;
 
+	@Column(name = "state")
 	private String state;
 
 	public String getName() {
@@ -80,6 +88,14 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	@Override
